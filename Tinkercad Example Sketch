@@ -1,0 +1,28 @@
+int x = 7;
+
+void setup(){
+  for (int pin = 7; pin >= 2; pin -=1){
+    pinMode(pin, OUTPUT);
+  }
+}
+
+void loop(){
+  for(x=7;x>=2;x-=1){
+    digitalWrite(x,HIGH);
+    delay(500);
+  }
+  for(x=2; x<= 7; x+=1) {
+    digitalWrite(x,LOW);
+    delay(500);
+  }
+  for(x=8; x>= 2; x-=2) {
+    digitalWrite(x+1,HIGH);
+    digitalWrite(x,HIGH);
+    delay(500);
+  }
+  for(x=1; x<= 7; x+=2) {
+    digitalWrite(x-1,LOW);
+    digitalWrite(x,LOW);
+    delay(500);
+  }
+}
