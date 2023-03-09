@@ -1,0 +1,150 @@
+My Engineering Notebook: Darren Cai, Emmanuel      		Date Range: 1/4/2022 - _____
+
+Today’s Date: 1/4/2023
+People working: Darren, Emmanuel
+rmWhat we did today:We brainstormed how to recreate the robot we did last term and started building the foundation of the robot. Tomorrow we will screw the pieces together and attach engines.
+Picture of robot, parts made, code, scratch work, etc:
+Insert > image > camera
+
+Today’s Date:1/5/2023
+People working:Absent
+What we did today:Absent
+Picture of robot, parts made, code, scratch work, etc:Absent
+
+Today’s Date:1/6/2023
+People working:Darren, Emmanuel
+What we did today:We attach wheels onto the motor and added parts of the foundation for the ramp. We also changed the placement of some things so the parts would fit better. On Monday we will build the ramp for the intake.
+Picture of robot, parts made, code, scratch work, etc:
+
+
+Today’s Date:1/10/2023
+People working:Darren Cai, Emmanuel
+What we did today:We continued building parts of the robot and we also started making the part for the robot where it picks up discs. Tomorrow we hope to finish building the ramp and start building the conveyor belt to pick up the discs.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/11/2023
+People working:Darren Cai, Emmanuel
+What we did today:We finished building the pickup, then we attached the pickup part with the other part of the robot and fixed some misplacements of screws. Tomorrow We hope to start attaching parts to create the conveyor belts for the pickup.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/12/2023
+People working: Emmanuel
+What we did today: simply added the front portion that will hold the conveyor belt
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/13/2023
+People working:Darren, Emmanuel
+What we did today: We started working on the conveyor part of the robot but we got stuck on attaching it as it was not aligned so we had to reconstruct the robot to fit the screws. We hope to finish the conveyor belt part the next day.
+
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/17/2023
+People working: Darren, Emmanuel
+What we did today:Today we added locks to the motors so the things wouldn’t fall out and we also finished making the conveyor belt part of the robot. Tomorrow we hope to be finished with the robot.
+Picture of robot, parts made, code, scratch work, etc: 
+
+
+Today’s Date:1/19/2023
+People working:Darren, Emmanuel
+What we did today: Today we had less time and could only finish half of the conveyor belt, however we started wiring the robot and fixing any problems it had with the remote. Tomorrow we hope to finish the robot.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/18/2023
+People working:Emmanuel
+What we did today:continued working on the robot, just about ready too attach the belts.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/20/2023
+People working:absent
+What we did today:absent
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/21/2023
+People working:Emmanuel
+What we did today:Build is done, still trying too figure out how too pick up with the conveyor, but i am losing hope. I’m considering just abandoning the conveyor and focusing solely onn the roller.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/22/2023
+People working:absent
+What we did today:absent
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/23/2023
+People working:Darren,Emmanuel 
+What we did today:today we fixed some of the malfunctioning hardware on the robot and then we wrote some code for the robot. After this, we participated in two matches of the Vex robot competition and won both of them. Problems that we ran into was that our pickup wouldn't work and we had to just score points with rollers. Tomorrow we will strategize more ways of scoring points without rollers.
+Picture of robot, parts made, code, scratch work, etc: 
+
+Today’s Date:1/24/2023
+People working:Emmanuel
+What we did today:did final touches too the robot, and any last minute changes were finalized today. New plan is too focus on rollers as the conveyer belt is unsuccessful.
+Picture of robot, parts made, code, scratch work, etc:
+
+Today’s Date:1/25/2023
+People working:Darren, Emmanuel
+What we did today:Today we tried to make a ramp for more efficient pickup for the robot but it didn't work so we asked Mrs.hale and we found a solution for it. We then started writing extra code for the autonomous part for different situations.
+Picture of robot, parts made, code, scratch work, etc:
+Today’s Date:1/31/2023
+People working:Emmanuel
+What we did today:Competition day, we ran our robots and only had 2 successful autonomous runs, but otherwise went smoothly
+Picture of robot, parts made, code, scratch work, etc:absent/*----------------------------------------------------------------------------*/
+/*                                                                            */
+/*    Module:       main.cpp                                                  */
+/*    Author:       C:\Users\99747190                                         */
+/*    Created:      Wed Jan 18 2023                                           */
+/*    Description:  V5 project                                                */
+/*                                                                            */
+/*----------------------------------------------------------------------------*/
+
+
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                   
+// Drivetrain           drivetrain    2, 1           
+// MotorGroup3          motor_group   3, 8           
+// ---- END VEXCODE CONFIGURED DEVICES ----
+
+
+#include "vex.h"
+
+
+using namespace vex;
+competition Competition;
+
+
+void autonomous(void) {
+ Drivetrain.driveFor(forward, 300,mm);
+ MotorGroup3.spin(forward, 90, velocityUnits::pct);
+}
+
+
+void usercontrol(void) {
+ while (1) {
+   wait(20, msec);
+ }
+}
+
+
+int main()  {
+
+
+ // Initializing Robot Configuration. DO NOT REMOVE!
+ Competition.autonomous(autonomous);
+ Competition.drivercontrol(usercontrol);
+
+
+ while (true) {
+   wait(100, msec);
+ }
+}
+
+
+Competition day 
+https://drive.google.com/file/d/1NunNGTTHxQUx7h_371SZRcMe-dRlmj4S/view?usp=share_link 
+
+
+
+
+
+
+
